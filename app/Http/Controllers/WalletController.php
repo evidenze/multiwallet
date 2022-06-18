@@ -183,21 +183,21 @@ class WalletController extends Controller
             $receiver->save();
 
             //Add transaction histories
-            $senderTransaction                          = new WalletTransactions;
-            $senderTransaction->transaction_type        = 'debit';
-            $senderTransaction->transaction_amount      = $request->amount;
-            $senderTransaction->transaction_description = 'Funds transfer to another wallet';
-            $senderTransaction->wallet_id               = $sender->id;
-            $senderTransaction->user_id                 = Auth::id();
-            $senderTransaction->save();
+            $senderWalletTransaction                          = new WalletTransactions;
+            $senderWalletTransaction->transaction_type        = 'debit';
+            $senderWalletTransaction->transaction_amount      = $request->amount;
+            $senderWalletTransaction->transaction_description = 'Funds transfer to another wallet';
+            $senderWalletTransaction->wallet_id               = $sender->id;
+            $senderWalletTransaction->user_id                 = Auth::id();
+            $senderWalletTransaction->save();
 
-            $receiverTransaction                          = new WalletTransactions;
-            $receiverTransaction->transaction_type        = 'credit';
-            $receiverTransaction->transaction_amount      = $request->amount;
-            $receiverTransaction->transaction_description = 'Funds received from another wallet';
-            $receiverTransaction->wallet_id               = $receiver->id;
-            $receiverTransaction->user_id                 = $receiver->user_id;
-            $receiverTransaction->save();
+            $receiverWalletTransaction                          = new WalletTransactions;
+            $receiverWalletTransaction->transaction_type        = 'credit';
+            $receiverWalletTransaction->transaction_amount      = $request->amount;
+            $receiverWalletTransaction->transaction_description = 'Funds received from another wallet';
+            $receiverWalletTransaction->wallet_id               = $receiver->id;
+            $receiverWalletTransaction->user_id                 = $receiver->user_id;
+            $receiverWalletTransaction->save();
 
             //Update senders transaction history
             $transaction                          = new Transactions;
