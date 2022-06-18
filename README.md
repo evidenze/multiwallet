@@ -84,11 +84,11 @@ List of available routes:
 
 **Auth routes**:\
 `POST /api/register` - Register new user\
-`POST /api/login` - Login user\
+`POST /api/login` - Login user
 
 **User routes**:\
 `GET /api/user` - Return authenticated user's details\
-`GET /api/transactions` - Return authenticated user transactions\
+`GET /api/transactions` - Return authenticated user transactions
 
 **Wallet routes**:\
 `POST /api/wallet` - Create a new wallet\
@@ -98,7 +98,7 @@ List of available routes:
 `POST /api/wallet/fund` - Fund wallet\
 `POST /api/wallet/transfer` - Send funds to another wallet
 
-**Statistics routes**
+**Statistics routes**:\
 `GET /api/users` - Return all users in the app\
 `GET /api/user/{id}` - Return a user\
 `GET /api/wallets` - Return all wallets in the app\
