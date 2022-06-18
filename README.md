@@ -6,6 +6,10 @@ A RESTful APIs for a multi-wallet application that allow users to send funds fro
 
 This app is built with Laravel framework. Details on how to set up your local machine for development and requirements can be found on the official Laravel website [https://laravel.com/docs/9.x/installation](https://laravel.com/docs/9.x/installation)
 
+## API Documentation
+
+Here is the link to the API documentation of this app. [https://evidenzeekanem.gitbook.io/multi-wallet-api-documentation/](https://evidenzeekanem.gitbook.io/multi-wallet-api-documentation/)
+
 
 Prerequisites
 -------------

@@ -36,7 +36,6 @@ class HomeController extends Controller
     public function getUserTransactions()
     {
         $transactions = Transactions::where('user_id', Auth::id())->get();
-        $transactions->user;
 
         return response()->json([
             'status'  => true,
