@@ -1,6 +1,6 @@
 # Multi Wallet RESTful API
 
-A RESTful APIs for a multi-wallet application that allow users to send funds from one wallet to another. Please note that this API is developed for the purpose of the assessment, production version of this API might be improved by adding tests and admin access, etc.
+A RESTful APIs for a multi-wallet application that allow users to send funds from one wallet to another. Please note that this API is developed for the purpose of the assessment, production version of this API might be improved by adding tests, admin access, etc.
 
 ## Note
 
