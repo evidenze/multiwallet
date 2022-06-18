@@ -70,6 +70,12 @@ Install Passport
 php artisan passport:install
 ```
 
+Generate test users and wallets (Optional)
+
+```bash
+php artisan db:seed
+```
+
 Run the app locally:
 
 ```bash

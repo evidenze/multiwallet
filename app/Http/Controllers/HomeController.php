@@ -100,7 +100,7 @@ class HomeController extends Controller
      */
     public function getUsersCount()
     {
-        $user = User::all()->count();
+        $user = User::count();
 
         return response()->json([
             'status'  => true,
@@ -116,7 +116,7 @@ class HomeController extends Controller
      */
     public function getWalletsCount()
     {
-        $wallets = Wallets::all()->count();
+        $wallets = Wallets::count();
 
         return response()->json([
             'status'  => true,
@@ -132,11 +132,11 @@ class HomeController extends Controller
      */
     public function getTotalWalletsBalance()
     {
-        $wallets_balance = Wallets::all()->sum('wallet_balance');
+        $wallets_balance = Wallets::sum('wallet_balance');
 
         return response()->json([
             'status'  => true,
-            'message' => 'Total wallets fetched successfully',
+            'message' => 'Total wallets balance fetched successfully',
             'data'    => $wallets_balance
         ], 200);
     }
@@ -148,7 +148,7 @@ class HomeController extends Controller
      */
     public function getTotalTransactionsVolume()
     {
-        $transactions = Transactions::all()->sum('amount');
+        $transactions = Transactions::sum('amount');
 
         return response()->json([
             'status'  => true,
@@ -164,10 +164,10 @@ class HomeController extends Controller
      */
     public function getAllStats()
     {
-        $users           = User::all()->count();
-        $wallets         = Wallets::all()->count();
-        $wallets_balance = Wallets::all()->sum('wallet_balance');
-        $transactions    = Transactions::all()->sum('amount');
+        $users           = User::count();
+        $wallets         = Wallets::count();
+        $wallets_balance = Wallets::sum('wallet_balance');
+        $transactions    = Transactions::sum('amount');
 
         return response()->json([
             'status'                    => true,
